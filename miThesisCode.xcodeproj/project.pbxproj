@@ -1,0 +1,126 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		441D4C561B0BE227006D942A /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; name = Makefile; path = Appendix/C/Makefile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
+		441D4C571B0BE3C6006D942A /* generateInitialDistribution.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = generateInitialDistribution.c; path = Appendix/C/src/generateInitialDistribution.c; sourceTree = "<group>"; };
+		441D4C581B0BE3C6006D942A /* motionIntegration-Serial.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "motionIntegration-Serial.c"; path = "Appendix/C/src/motionIntegration-Serial.c"; sourceTree = "<group>"; };
+		441D4C591B0BE3CF006D942A /* generateInitialDistribution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = generateInitialDistribution.h; path = Appendix/C/include/generateInitialDistribution.h; sourceTree = "<group>"; };
+		441D4C5A1B0BE3CF006D942A /* motionIntegration-Serial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "motionIntegration-Serial.h"; path = "Appendix/C/include/motionIntegration-Serial.h"; sourceTree = "<group>"; };
+		4487C1D91B127F5C008A83FC /* magneticField.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = magneticField.c; path = Appendix/C/src/magneticField.c; sourceTree = "<group>"; };
+		4487C1DB1B127F7E008A83FC /* magneticField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = magneticField.h; path = Appendix/C/include/magneticField.h; sourceTree = "<group>"; };
+		4487C1DE1B12805E008A83FC /* vectorTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vectorTypes.h; path = Appendix/C/include/vectorTypes.h; sourceTree = "<group>"; };
+		44FBFAE81B27B1DC00E3740E /* declarePhysicalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = declarePhysicalConstants.h; path = Appendix/C/src/declarePhysicalConstants.h; sourceTree = "<group>"; };
+		44FBFAE91B27B2A200E3740E /* definePhysicalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = definePhysicalConstants.h; path = Appendix/C/src/definePhysicalConstants.h; sourceTree = "<group>"; };
+		44FBFAEA1B27B5CD00E3740E /* declareSimulationParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = declareSimulationParameters.h; path = Appendix/C/include/declareSimulationParameters.h; sourceTree = "<group>"; };
+		44FBFAEB1B27B62900E3740E /* defineSimulationParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = defineSimulationParameters.h; path = Appendix/C/include/defineSimulationParameters.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		441D4C441B08AB7F006D942A = {
+			isa = PBXGroup;
+			children = (
+				441D4C4D1B08ADED006D942A /* motionIntegration */,
+			);
+			sourceTree = "<group>";
+		};
+		441D4C4D1B08ADED006D942A /* motionIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				441D4C4F1B08AE0B006D942A /* C */,
+			);
+			name = motionIntegration;
+			sourceTree = "<group>";
+		};
+		441D4C4F1B08AE0B006D942A /* C */ = {
+			isa = PBXGroup;
+			children = (
+				441D4C561B0BE227006D942A /* Makefile */,
+				4487C1DD1B127F91008A83FC /* include */,
+				4487C1DC1B127F83008A83FC /* src */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
+		4487C1DC1B127F83008A83FC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4487C1D91B127F5C008A83FC /* magneticField.c */,
+				441D4C571B0BE3C6006D942A /* generateInitialDistribution.c */,
+				441D4C581B0BE3C6006D942A /* motionIntegration-Serial.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		4487C1DD1B127F91008A83FC /* include */ = {
+			isa = PBXGroup;
+			children = (
+				44FBFAE81B27B1DC00E3740E /* declarePhysicalConstants.h */,
+				44FBFAE91B27B2A200E3740E /* definePhysicalConstants.h */,
+				44FBFAEA1B27B5CD00E3740E /* declareSimulationParameters.h */,
+				44FBFAEB1B27B62900E3740E /* defineSimulationParameters.h */,
+				441D4C591B0BE3CF006D942A /* generateInitialDistribution.h */,
+				441D4C5A1B0BE3CF006D942A /* motionIntegration-Serial.h */,
+				4487C1DE1B12805E008A83FC /* vectorTypes.h */,
+				4487C1DB1B127F7E008A83FC /* magneticField.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		441D4C451B08AB7F006D942A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+			};
+			buildConfigurationList = 441D4C481B08AB7F006D942A /* Build configuration list for PBXProject "miThesisCode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 441D4C441B08AB7F006D942A;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		441D4C491B08AB7F006D942A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		441D4C4A1B08AB7F006D942A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		441D4C481B08AB7F006D942A /* Build configuration list for PBXProject "miThesisCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				441D4C491B08AB7F006D942A /* Debug */,
+				441D4C4A1B08AB7F006D942A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 441D4C451B08AB7F006D942A /* Project object */;
+}
