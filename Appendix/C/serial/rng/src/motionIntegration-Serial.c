@@ -76,8 +76,8 @@ void readFiles(double3 *pos,
     FILE *posFile;
     FILE *velFile;
     
-    posFile = fopen("pos.bin", "r");
-    velFile = fopen("vel.bin", "r");
+    posFile = fopen("pos.bin", "rb");
+    velFile = fopen("vel.bin", "rb");
     
     fread(pos, sizeof(double3), NUM_ATOMS, posFile);
     fread(vel, sizeof(double3), NUM_ATOMS, velFile);

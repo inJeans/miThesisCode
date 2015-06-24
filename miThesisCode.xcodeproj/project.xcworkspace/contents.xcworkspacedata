@@ -4,8 +4,4 @@
    <FileRef
       location = "self:miThesisCode.xcodeproj">
    </FileRef>
-   <Group
-      location = "container:"
-      name = "Appendix">
-   </Group>
 </Workspace>

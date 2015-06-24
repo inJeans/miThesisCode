@@ -7,42 +7,283 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		441D4C561B0BE227006D942A /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; name = Makefile; path = Appendix/C/Makefile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
-		441D4C571B0BE3C6006D942A /* generateInitialDistribution.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = generateInitialDistribution.c; path = Appendix/C/src/generateInitialDistribution.c; sourceTree = "<group>"; };
-		441D4C581B0BE3C6006D942A /* motionIntegration-Serial.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "motionIntegration-Serial.c"; path = "Appendix/C/src/motionIntegration-Serial.c"; sourceTree = "<group>"; };
-		441D4C591B0BE3CF006D942A /* generateInitialDistribution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = generateInitialDistribution.h; path = Appendix/C/include/generateInitialDistribution.h; sourceTree = "<group>"; };
-		441D4C5A1B0BE3CF006D942A /* motionIntegration-Serial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "motionIntegration-Serial.h"; path = "Appendix/C/include/motionIntegration-Serial.h"; sourceTree = "<group>"; };
-		4487C1D91B127F5C008A83FC /* magneticField.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = magneticField.c; path = Appendix/C/src/magneticField.c; sourceTree = "<group>"; };
-		4487C1DB1B127F7E008A83FC /* magneticField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = magneticField.h; path = Appendix/C/include/magneticField.h; sourceTree = "<group>"; };
-		4487C1DE1B12805E008A83FC /* vectorTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vectorTypes.h; path = Appendix/C/include/vectorTypes.h; sourceTree = "<group>"; };
-		44FBFAE81B27B1DC00E3740E /* declarePhysicalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = declarePhysicalConstants.h; path = Appendix/C/src/declarePhysicalConstants.h; sourceTree = "<group>"; };
-		44FBFAE91B27B2A200E3740E /* definePhysicalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = definePhysicalConstants.h; path = Appendix/C/src/definePhysicalConstants.h; sourceTree = "<group>"; };
-		44FBFAEA1B27B5CD00E3740E /* declareSimulationParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = declareSimulationParameters.h; path = Appendix/C/include/declareSimulationParameters.h; sourceTree = "<group>"; };
-		44FBFAEB1B27B62900E3740E /* defineSimulationParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = defineSimulationParameters.h; path = Appendix/C/include/defineSimulationParameters.h; sourceTree = "<group>"; };
+		1D2D1AB01B3A17A700717F77 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; name = Makefile; path = Appendix/C/serial/rng/Makefile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
+		1D2D1AB11B3A17B100717F77 /* generateInitialDistribution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = generateInitialDistribution.h; path = Appendix/C/serial/rng/include/generateInitialDistribution.h; sourceTree = "<group>"; };
+		1D2D1AB31B3A17B100717F77 /* motionIntegration-Serial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "motionIntegration-Serial.h"; path = "Appendix/C/serial/rng/include/motionIntegration-Serial.h"; sourceTree = "<group>"; };
+		1D2D1AB41B3A17B100717F77 /* rng-serial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "rng-serial.h"; path = "Appendix/C/serial/rng/include/rng-serial.h"; sourceTree = "<group>"; };
+		1D2D1AB51B3A17B100717F77 /* rngTest-serial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "rngTest-serial.h"; path = "Appendix/C/serial/rng/include/rngTest-serial.h"; sourceTree = "<group>"; };
+		1D2D1AB61B3A17BF00717F77 /* generateInitialDistribution.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = generateInitialDistribution.c; path = Appendix/C/serial/rng/src/generateInitialDistribution.c; sourceTree = "<group>"; };
+		1D2D1AB81B3A17BF00717F77 /* motionIntegration-Serial.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "motionIntegration-Serial.c"; path = "Appendix/C/serial/rng/src/motionIntegration-Serial.c"; sourceTree = "<group>"; };
+		1D2D1AB91B3A17BF00717F77 /* rng-serial.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "rng-serial.c"; path = "Appendix/C/serial/rng/src/rng-serial.c"; sourceTree = "<group>"; };
+		1D2D1ABA1B3A17BF00717F77 /* rngTest-serial.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "rngTest-serial.c"; path = "Appendix/C/serial/rng/src/rngTest-serial.c"; sourceTree = "<group>"; };
+		1D2D1AD21B3A1CC800717F77 /* declarePhysicalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = declarePhysicalConstants.h; path = "Appendix/C/common-C/include/declarePhysicalConstants.h"; sourceTree = "<group>"; };
+		1D2D1AD31B3A1CC800717F77 /* declareSimulationParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = declareSimulationParameters.h; path = "Appendix/C/common-C/include/declareSimulationParameters.h"; sourceTree = "<group>"; };
+		1D2D1AD41B3A1CC800717F77 /* definePhysicalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = definePhysicalConstants.h; path = "Appendix/C/common-C/include/definePhysicalConstants.h"; sourceTree = "<group>"; };
+		1D2D1AD51B3A1CC800717F77 /* defineSimulationParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = defineSimulationParameters.h; path = "Appendix/C/common-C/include/defineSimulationParameters.h"; sourceTree = "<group>"; };
+		1D2D1AD61B3A1CC800717F77 /* vectorTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vectorTypes.h; path = "Appendix/C/common-C/include/vectorTypes.h"; sourceTree = "<group>"; };
+		1D2D1ADA1B3A1D5100717F77 /* magneticField.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = magneticField.c; path = "Appendix/C/serial/common-serial/src/magneticField.c"; sourceTree = "<group>"; };
+		1D2D1ADB1B3A1D5A00717F77 /* magneticField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = magneticField.h; path = "Appendix/C/serial/common-serial/include/magneticField.h"; sourceTree = "<group>"; };
+		1D2D1ADC1B3A1DF000717F77 /* rng-openMP.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "rng-openMP.c"; path = "Appendix/C/openMP/rng/src/rng-openMP.c"; sourceTree = "<group>"; };
+		1D2D1ADE1B3A1E1700717F77 /* rng-openMP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "rng-openMP.h"; path = "Appendix/C/openMP/rng/include/rng-openMP.h"; sourceTree = "<group>"; };
+		1D2D1ADF1B3A1E3300717F77 /* rngTest-openMP.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "rngTest-openMP.c"; path = "Appendix/C/openMP/rng/src/rngTest-openMP.c"; sourceTree = "<group>"; };
+		1D2D1AE11B3A1E4100717F77 /* rngTest-openMP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "rngTest-openMP.h"; path = "Appendix/C/openMP/rng/include/rngTest-openMP.h"; sourceTree = "<group>"; };
+		1D2D1AE21B3A1E5D00717F77 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; name = Makefile; path = Appendix/C/openMP/rng/Makefile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		1D2D1A931B3A157700717F77 /* serial */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AD71B3A1CE100717F77 /* common-serial */,
+				1D2D1AAD1B3A176A00717F77 /* rng */,
+				1D2D1AAE1B3A177E00717F77 /* distributionGeneration */,
+				1D2D1AAF1B3A178F00717F77 /* motionIntegration */,
+			);
+			name = serial;
+			sourceTree = "<group>";
+		};
+		1D2D1A941B3A159E00717F77 /* openMP */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1ABF1B3A17E500717F77 /* rng */,
+				1D2D1AC31B3A181100717F77 /* distributionGeneration */,
+				1D2D1AC01B3A17EF00717F77 /* motionIntegration */,
+			);
+			name = openMP;
+			sourceTree = "<group>";
+		};
+		1D2D1A951B3A15A900717F77 /* CUDA */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AC71B3A185200717F77 /* rng */,
+			);
+			name = CUDA;
+			sourceTree = "<group>";
+		};
+		1D2D1A961B3A15CD00717F77 /* common-C */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1A971B3A15D600717F77 /* include */,
+			);
+			name = "common-C";
+			sourceTree = "<group>";
+		};
+		1D2D1A971B3A15D600717F77 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AD21B3A1CC800717F77 /* declarePhysicalConstants.h */,
+				1D2D1AD31B3A1CC800717F77 /* declareSimulationParameters.h */,
+				1D2D1AD41B3A1CC800717F77 /* definePhysicalConstants.h */,
+				1D2D1AD51B3A1CC800717F77 /* defineSimulationParameters.h */,
+				1D2D1AD61B3A1CC800717F77 /* vectorTypes.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		1D2D1AA81B3A169B00717F77 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1ADE1B3A1E1700717F77 /* rng-openMP.h */,
+				1D2D1AE11B3A1E4100717F77 /* rngTest-openMP.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		1D2D1AA91B3A16A300717F77 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1ADC1B3A1DF000717F77 /* rng-openMP.c */,
+				1D2D1ADF1B3A1E3300717F77 /* rngTest-openMP.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		1D2D1AAA1B3A16AE00717F77 /* include */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		1D2D1AAB1B3A16B400717F77 /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		1D2D1AAD1B3A176A00717F77 /* rng */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AB01B3A17A700717F77 /* Makefile */,
+				4487C1DD1B127F91008A83FC /* include */,
+				4487C1DC1B127F83008A83FC /* src */,
+			);
+			name = rng;
+			sourceTree = "<group>";
+		};
+		1D2D1AAE1B3A177E00717F77 /* distributionGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1ABC1B3A17D000717F77 /* include */,
+				1D2D1ABB1B3A17CB00717F77 /* src */,
+			);
+			name = distributionGeneration;
+			sourceTree = "<group>";
+		};
+		1D2D1AAF1B3A178F00717F77 /* motionIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1ABE1B3A17DC00717F77 /* include */,
+				1D2D1ABD1B3A17D800717F77 /* src */,
+			);
+			name = motionIntegration;
+			sourceTree = "<group>";
+		};
+		1D2D1ABB1B3A17CB00717F77 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AB61B3A17BF00717F77 /* generateInitialDistribution.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		1D2D1ABC1B3A17D000717F77 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AB11B3A17B100717F77 /* generateInitialDistribution.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		1D2D1ABD1B3A17D800717F77 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AB81B3A17BF00717F77 /* motionIntegration-Serial.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		1D2D1ABE1B3A17DC00717F77 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AB31B3A17B100717F77 /* motionIntegration-Serial.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		1D2D1ABF1B3A17E500717F77 /* rng */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AE21B3A1E5D00717F77 /* Makefile */,
+				1D2D1AA81B3A169B00717F77 /* include */,
+				1D2D1AA91B3A16A300717F77 /* src */,
+			);
+			name = rng;
+			sourceTree = "<group>";
+		};
+		1D2D1AC01B3A17EF00717F77 /* motionIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AC61B3A183B00717F77 /* include */,
+				1D2D1AC11B3A17F800717F77 /* src */,
+			);
+			name = motionIntegration;
+			sourceTree = "<group>";
+		};
+		1D2D1AC11B3A17F800717F77 /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		1D2D1AC31B3A181100717F77 /* distributionGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AC51B3A183100717F77 /* include */,
+				1D2D1AC41B3A182C00717F77 /* src */,
+			);
+			name = distributionGeneration;
+			sourceTree = "<group>";
+		};
+		1D2D1AC41B3A182C00717F77 /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		1D2D1AC51B3A183100717F77 /* include */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		1D2D1AC61B3A183B00717F77 /* include */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		1D2D1AC71B3A185200717F77 /* rng */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AAA1B3A16AE00717F77 /* include */,
+				1D2D1AAB1B3A16B400717F77 /* src */,
+			);
+			name = rng;
+			sourceTree = "<group>";
+		};
+		1D2D1AD71B3A1CE100717F77 /* common-serial */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1AD91B3A1D3D00717F77 /* include */,
+				1D2D1AD81B3A1D3400717F77 /* src */,
+			);
+			name = "common-serial";
+			sourceTree = "<group>";
+		};
+		1D2D1AD81B3A1D3400717F77 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1ADA1B3A1D5100717F77 /* magneticField.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		1D2D1AD91B3A1D3D00717F77 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1D2D1ADB1B3A1D5A00717F77 /* magneticField.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
 		441D4C441B08AB7F006D942A = {
 			isa = PBXGroup;
 			children = (
-				441D4C4D1B08ADED006D942A /* motionIntegration */,
+				441D4C4D1B08ADED006D942A /* Appendix */,
 			);
 			sourceTree = "<group>";
 		};
-		441D4C4D1B08ADED006D942A /* motionIntegration */ = {
+		441D4C4D1B08ADED006D942A /* Appendix */ = {
 			isa = PBXGroup;
 			children = (
 				441D4C4F1B08AE0B006D942A /* C */,
 			);
-			name = motionIntegration;
+			name = Appendix;
 			sourceTree = "<group>";
 		};
 		441D4C4F1B08AE0B006D942A /* C */ = {
 			isa = PBXGroup;
 			children = (
-				441D4C561B0BE227006D942A /* Makefile */,
-				4487C1DD1B127F91008A83FC /* include */,
-				4487C1DC1B127F83008A83FC /* src */,
+				1D2D1A961B3A15CD00717F77 /* common-C */,
+				1D2D1A931B3A157700717F77 /* serial */,
+				1D2D1A941B3A159E00717F77 /* openMP */,
+				1D2D1A951B3A15A900717F77 /* CUDA */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -50,9 +291,8 @@
 		4487C1DC1B127F83008A83FC /* src */ = {
 			isa = PBXGroup;
 			children = (
-				4487C1D91B127F5C008A83FC /* magneticField.c */,
-				441D4C571B0BE3C6006D942A /* generateInitialDistribution.c */,
-				441D4C581B0BE3C6006D942A /* motionIntegration-Serial.c */,
+				1D2D1AB91B3A17BF00717F77 /* rng-serial.c */,
+				1D2D1ABA1B3A17BF00717F77 /* rngTest-serial.c */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -60,14 +300,8 @@
 		4487C1DD1B127F91008A83FC /* include */ = {
 			isa = PBXGroup;
 			children = (
-				44FBFAE81B27B1DC00E3740E /* declarePhysicalConstants.h */,
-				44FBFAE91B27B2A200E3740E /* definePhysicalConstants.h */,
-				44FBFAEA1B27B5CD00E3740E /* declareSimulationParameters.h */,
-				44FBFAEB1B27B62900E3740E /* defineSimulationParameters.h */,
-				441D4C591B0BE3CF006D942A /* generateInitialDistribution.h */,
-				441D4C5A1B0BE3CF006D942A /* motionIntegration-Serial.h */,
-				4487C1DE1B12805E008A83FC /* vectorTypes.h */,
-				4487C1DB1B127F7E008A83FC /* magneticField.h */,
+				1D2D1AB41B3A17B100717F77 /* rng-serial.h */,
+				1D2D1AB51B3A17B100717F77 /* rngTest-serial.h */,
 			);
 			name = include;
 			sourceTree = "<group>";

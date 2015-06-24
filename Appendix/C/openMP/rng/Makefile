@@ -49,12 +49,9 @@ BUILDDIR = bin/
 OBJDIR   = $(BUILDDIR)obj/
 SRCDIR   = src/
 
-EXEC = $(BUILDDIR)openMP
-EXECM = $(BUILDDIR)openMPmove
-TESTMOTION = $(BUILDDIR)testMotion
-TESTCOLLISIONS = $(BUILDDIR)testCollisions
+EXEC = $(BUILDDIR)openMPrng
 
-INCLUDE += -I include/
+INCLUDE += -I include/ -I ../../common-C/include
 
 all: $(EXEC)
 
@@ -62,22 +59,13 @@ debug: NVCCFLAGS += -g -G
 #debug: clean
 debug: $(EXEC)
 
-profile: NVCCFLAGS += -pg
+profile: OMPFLAGS += -pg
 profile: $(EXEC)
 
-move: $(EXECM)
-
-$(EXEC): $(addprefix $(OBJDIR), generateInitialDistribution.o magneticField.o )
+$(EXEC): $(addprefix $(OBJDIR), rng-openMP.o rngTest-openMP.o )
 	@echo 'Building file: $<'
-	@echo 'Invoking: OpenMP Linker'
-	$(GCC) $(OMPFLAGS) -o $@ $^ $(INCLUDE)
-	@echo "Finished building: $< $(OK_STRING)"
-	@echo ' '
-
-$(EXECM): $(addprefix $(OBJDIR), motionIntegration-Serial.o magneticField.o )
-	@echo 'Building file: $<'
-	@echo 'Invoking: OpenMP Linker'
-	$(GCC) $(OMPFLAGS) -o $@ $^ $(INCLUDE)
+	@echo 'Invoking: C Linker'
+	$(GCC) $(OMPFLAGS) -o $@ $^ $(INCLUDE) -ltestu01 -lmylib $(LIB)
 	@echo "Finished building: $< $(OK_STRING)"
 	@echo ' '
 
@@ -90,21 +78,11 @@ $(OBJDIR)%.o: $(SRCDIR)%.c
 
 run:
 	make
-	{ time ./$(BUILDDIR)openMP ; } | tee output.txt
-#	/usr/local/hdf5/bin/h5import "./src/main.cu" -c "./hdfimportconfig/h5import-main.conf" -o "mmDataMCWF.h5"
-#	/usr/local/hdf5/bin/h5import "./src/evolveSpin.cu" -c "./hdfimportconfig/h5import-evolveSpin.conf" -o "mmDataMCWF.h5"
-#	/usr/local/hdf5/bin/h5import "Makefile" -c "./hdfimportconfig/h5import-makefile.conf" -o "mmDataMCWF.h5"
-	@echo "" >> output.txt
-	@echo "----------------------------------------" >> output.txt
-	@echo "" >> output.txt
-	tput bel
-
-memcheck:
-	{ time cuda-memcheck ./$(BUILDDIR)CUDADSMC ; } | tee output.txt
+	{ time ./$(BUILDDIR)openMPrng ; } | tee output.txt
 	@echo "" >> output.txt
 	@echo "----------------------------------------" >> output.txt
 	@echo "" >> output.txt
 	tput bel
 
 clean:
-	rm -rf $(OBJDIR)*.o $(BUILDDIR)openMP
+	rm -rf $(OBJDIR)*.o $(BUILDDIR)serialrng

@@ -41,21 +41,29 @@ int main(int argc, const char * argv[])
                         vel,
                         NUM_ATOMS,
                         initialTemp );
-    
+	
 //    testDist();
     
     FILE *posFile;
     FILE *velFile;
     
-    posFile = fopen("pos.bin", "w+");
-    velFile = fopen("vel.bin", "w+");
-    
+    if ( ( posFile = fopen("pos.bin", "wb") ) == NULL )
+	{
+		printf("Unable to create pos.bin");
+		exit(-1);
+	}
+    if ( ( velFile = fopen("vel.bin", "wb") ) == NULL )
+	{
+		printf("Unable to create vel.bin");
+		exit(-1);
+	}
+	
     fwrite(pos, sizeof(double3), NUM_ATOMS, posFile);
     fwrite(vel, sizeof(double3), NUM_ATOMS, velFile);
-    
+	
     fclose(posFile);
     fclose(velFile);
-    
+	
     return 0;
 }
 
