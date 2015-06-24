@@ -7,6 +7,7 @@
 //
 
 #include <stdlib.h>
+#include <time.h>
 
 extern "C"
 {
@@ -24,7 +25,7 @@ extern "C"
 int main(int argc, const char * argv[])
 {
 	state  rngstates[BATCH_SIZE];
-	double randarray[BATCH_SIZE] = { 0. };
+	double randarray[BATCH_SIZE*10] = { 0. };
 	
 	parallelinitrng(rngstates,
 					BATCH_SIZE );
@@ -35,20 +36,29 @@ int main(int argc, const char * argv[])
 	
 	rndfileptr = fopen(rndfilename, "w+");
 	
-	int num_loops = NUM_RN / BATCH_SIZE + 1;
+	int num_loops = NUM_RN / BATCH_SIZE / 1 + 1;
+    
+    clock_t begin, end;
+    double time_spent;
+    
+    begin = clock();
 	for (int l=0; l<num_loops; l++) {
 		parallelrand(randarray,
 					 BATCH_SIZE,
 				     rngstates );
 		
-		for (int r=0; r < BATCH_SIZE; r++) {
+		for (int r=0; r < BATCH_SIZE*1; r++) {
 			fprintf( rndfileptr, "%.15f ",  randarray[r] );
 		}
 	}
+    end = clock();
+    time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 	
 	fclose(rndfileptr);
 	
-	bbattery_SmallCrushFile( rndfilename );
+    printf("Time spent generating file = %fs\n\n", time_spent);
+    
+//	bbattery_SmallCrushFile( rndfilename );
 	
 	return 0;
 }

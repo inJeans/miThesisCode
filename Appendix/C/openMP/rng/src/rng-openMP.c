@@ -7,6 +7,7 @@
 //
 
 #include <stdlib.h>
+#include <omp.h>
 
 #include "rng-openMP.h"
 
@@ -91,7 +92,8 @@ void parallelrand(double *randarray,
 		 r < numberOfThreads;
 		 r++)
 	{
-		randarray[r] = dblrand( &states[r] );
+        int t = omp_get_thread_num();
+		randarray[t*1+r] = dblrand( &states[r] );
 	}
 	
 	return;

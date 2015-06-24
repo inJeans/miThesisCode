@@ -6,6 +6,7 @@
 //
 //
 #include <stdlib.h>
+#include <time.h>
 
 extern "C"
 {
@@ -31,12 +32,22 @@ int main(int argc, const char * argv[])
 	
 	rndfileptr = fopen(rndfilename, "w+");
 	
+    clock_t begin, end;
+    double time_spent;
+    
+    begin = clock();
+    
 	for (int i=0; i < NUM_RN; i++) {
 		fprintf( rndfileptr, "%.15f ",  dblrand( &rngstate ) );
 	}
 	
+    end = clock();
+    time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+    
 	fclose(rndfileptr);
 	
+    printf("Time spent generating file = %fs\n", time_spent);
+    
 	bbattery_SmallCrushFile( rndfilename );
 	
 	return 0;
